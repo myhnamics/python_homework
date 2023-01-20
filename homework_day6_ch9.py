@@ -1,3 +1,4 @@
+import random
 # 9.2
 # def get_odd():
 #     for i in range(10):
@@ -27,9 +28,14 @@ def start_end(func):
 
 def nothing():
     print('nothing')
-    return nothing
 
-start_nothing = start_end(nothing())
 
+start_nothing = start_end(nothing)
 
 start_nothing()
+
+
+
+
+
+# 9.4
