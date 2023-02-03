@@ -17,19 +17,20 @@ def new_pokemon(idx, pokemon):
 def find_insert(pokemon,lv):
     find_pos = -1
     for i in range(len(pokemons)):
-        if lv >= pokemons[i][1]:
+        list_pokemon = list(pokemons[i].values())
+        if lv >= list_pokemon[0]:
             find_pos = i
             break
     if find_pos == -1:
         find_pos == len(pokemons)
-    new_pokemon(find_pos,(pokemon,lv))
-
-
+    new_pokemon(find_pos, {pokemon : lv})
 
 
 ## 전역 변수 선언 부분 ##
-pokemons = [("파이리",20), ("피카츄",18), ("망냐뇽",9), ("찌르꼬",5),("이상해씨",3)]
+pokemons = [{"파이리":20}, {"피카츄":18}, {"망냐뇽":9}, {"찌르꼬":5}, {"이상해씨":3}]
 
+list_pokemon = list(pokemons[2].values())
+print(type(list_pokemon))
 ## 메인 코드 부분 ##
 if __name__=="__main__":
 
