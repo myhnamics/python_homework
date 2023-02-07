@@ -38,5 +38,3 @@ if __name__=="__main__":
         count = int(input("레벨 -->"))
         find_insert(data,count)
         print(pokemons)
-
-
